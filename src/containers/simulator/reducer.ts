@@ -1,10 +1,12 @@
-import {EmulatorState, Action, ActionType} from './types';
+import {Action, ActionType, SimulatorState} from './types';
 
-const initialState: EmulatorState = {
+const initialState: SimulatorState = {
   requests: [],
+  currentBatchRequestId: '',
+  currentRequest: null,
 };
 
-const reducer = (state = initialState, action: Action): EmulatorState => {
+const reducer = (state = initialState, action: Action): SimulatorState => {
   switch (action.type) {
     case ActionType.ADD_REQUEST:
       return {
@@ -29,6 +31,19 @@ const reducer = (state = initialState, action: Action): EmulatorState => {
         ...state,
         requests: state.requests.filter(request => request.id !== action.requestId),
       };
+
+    case ActionType.SET_BUTCH_REQUEST_ID:
+      return {
+        ...state,
+        currentBatchRequestId: action.id,
+      };
+
+    case ActionType.SET_CURRENT_REQUEST:
+      return {
+        ...state,
+        currentRequest: action.request ? {...action.request} : action.request,
+      };
+
     default:
       return state;
   }

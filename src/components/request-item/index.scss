@@ -1,0 +1,25 @@
+.rs {
+  &__item {
+    margin-top: 10px;
+    display: flex;
+    justify-content: space-between;
+  }
+
+  &__r-info {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  &__r-name {
+    width: 168px;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    margin-left: 5px;
+    margin-right: 5px;
+  }
+
+  &__r-rm-btn {
+    margin-right: 10px;
+  }
+}

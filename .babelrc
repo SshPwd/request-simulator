@@ -1,4 +1,0 @@
-{
-  "presets": ["react-app"],
-  "plugins": ["const-enum", "@babel/transform-typescript"]
-}
