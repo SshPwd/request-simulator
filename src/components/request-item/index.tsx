@@ -3,6 +3,7 @@ import Button from '@atlaskit/button';
 import TrashIcon from '@atlaskit/icon/glyph/trash';
 import {SimulatorRequest} from 'containers/simulator/types';
 import StatusLabel from 'components/status-label';
+import './index.scss';
 
 type Props = {
   request: SimulatorRequest;

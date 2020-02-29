@@ -15,8 +15,6 @@ WORKDIR /var/app
 COPY --from=build /app/build ./build
 EXPOSE 80
 
-COPY landing-page/landing-assets ./build/landing-assets
-COPY landing-page/landing.html ./build/landing.html
 COPY nginx.conf /etc/nginx/nginx.conf
 
 
